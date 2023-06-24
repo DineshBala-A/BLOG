@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dinesh_Bala</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+               /* background-color: rgb(225,229,232);*/
+              
+               /*background-color:#d6d6d6;*/
+               background-image: url(../images/HD-Purple-Image.jpg);
+               font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               
+            }   
+            .screen{
+                /*display:flex;
+                flex-wrap:wrap;
+                justify-content:center;*/
+                color: rgb(255, 169, 71);
+                border:2px solid;
+                margin-top:50px;
+                
+                
+            }
+            .nav{
+                width:99%;
+                position:fixed;
+                display:flex;
+                justify-content: space-between;
+                background-color: rgba(137, 43, 226, 0.278) ;
+                font-weight: bold;
+                font-size:medium;
+                padding:5px;
+                border-radius:50px;
+                z-index:1;
+                
+             
+            }
+            .dp{
+                width:50px;
+                height:50px;
+                display: inline-block;
+                border:1px ;
+                border-radius:50%;
+            
+            }
+            
+                
+            .n1{
+                list-style-type: none;
+                display:flex;
+                margin-right:2%;
+                float:right;
+                
+                
+            }
+            .n1 li
+            {
+                
+
+            }
+            ul{
+                display:inline-block;
+                
+            }
+            li{
+                display:inline;
+                margin-left:25px;
+                
+                
+            }
+            li:hover{
+                
+                cursor: pointer;
+                
+            }
+            .dp_div{
+                display:inline-block;
+                margin-left:5px;
+            }
+            .logo_name{
+              display:inline;
+              position:absolute;
+              top:35%;
+              margin-left:4px;
+              
+            }
+            .c-img{
+                width:20px;
+                height:20px;
+                top:25px;
+                right:20px;
+                position:absolute;
+                display:none;
+
+            }
+            .logo{
+                display:inline-block;
+            }
+            .logo:hover,li:hover{
+                cursor:pointer;
+                color:rgb(255, 169, 71);
+            }
+            .logo:active,li:active{
+                color:grey;
+            }
+            .d-menu{
+                position:absolute;
+                top:25px;
+                right:20px;
+                display:none;
+            }
+            .m1{
+                width: 20px;
+                height: 20px;
+                
+            }
+            .m1:active{
+                opacity: 0.5;
+            }
+            .m2{
+                position:absolute;
+                text-align: center;
+                display:none;
+                width:200px;
+               /* border:2px solid black;*/
+                right:10px;
+                background-color: white;
+            }
+            .m-items{
+                border:1px solid black;
+                padding:10px;
+                
+            }
+            /*
+            .d-menu:hover .m2{
+                display:block;
+               
+            }
+            .d-menu:hover .c-img{
+                display:block;
+               
+            }
+            */
+            .m-items:hover{
+                color:rgb(255, 169, 71);
+            }
+            nav::after{
+                content: " ";
+                display:table;
+                text-decoration: underline;
+
+            }
+          
+                
+            
+            .home
+            {   
+                opacity:1;
+                margin:auto;
+                border:0px solid rgba(255, 255, 255, 0.296);
+                border-radius:5px;
+                width:90%;
+                
+                background:linear-gradient(to right,rgba(135, 19, 244, 0.718),rgba(137, 43, 226, 0.696)),url(../images/blur.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding:20px;
+                min-height: 750px;
+                /*background:linear-gradient(-30deg,rgba(0, 0, 0, 0.732),rgba(48, 48, 48, 0.814)),url(19154.jpg);
+                background-size:150%;*/
+                color:white;
+                box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.36);
+                
+            }
+            
+            .intro{
+               
+               margin-top:150px;
+               font-size:xxx-large;
+               text-align:center;
+            }
+            .int{
+                
+                text-align:center;
+                font-size:x-large;
+                margin-top:-30px;
+                font-weight: 500;
+
+            }
+            .three{
+                color:rgb(115, 115, 115);
+                font-family: 'Courier New', Courier, monospace;
+                font-weight:bold;
+            }
+            .resume{
+                margin:auto;
+                font-size:larger;
+                font-weight:bold;
+                background-color: white;
+                text-align: center;
+                border:2px solid white;
+                border-radius:25px;
+                width:150px;
+                padding:10px;
+            }  
+            .resume:hover{
+                box-shadow: 5px 5px 5px aqua;
+                text-shadow:1px 1px grey;
+                cursor:pointer;
+            } 
+            .resume:active{
+                opacity:0.5;
+            }
+                
+        
+            span{
+                font-weight:bold;
+            }
+            
+            .name{
+                color:rgb(255, 162, 0);
+                text-shadow:1px 1px rgb(255, 68, 0);
+            }
+            .scroll-downs {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            
+            width :34px;
+            height: 55px;
+            }
+           
+            .i-sm{
+                width:20px;
+                height:20px;
+            }
+            .smedia{
+                display:flex;
+                flex-direction: column;
+                position:absolute;
+                top:430px;
+                left:15px;
+            }
+            .smedia a{
+                border:2px solid black;
+                padding:10px;
+
+
+            }
+            .about{
+                margin-top:100px;
+                margin-bottom:30px;
+                padding:5px;
+            }
+            .about::after{
+                content: " ";
+                display:table;
+                text-decoration: underline;
+                
+            }
+            .headding{
+                font-size:xx-large;
+                text-align:center;
+                text-shadow:1px 1px grey;
+               
+            }
+            .uline{
+                border:3px solid rgb(255, 162, 0);
+                height:4px;
+                width:50px;
+                margin:auto;
+                margin-bottom:50px;
+            }
+            .about-a{
+                font-size:x-large;
+                font-family:'Times New Roman', Times, serif;
+                min-height:200px;
+                padding:5px;
+                
+                color:rgb(112, 111, 111);
+            }
+            .high{
+                color:rgb(83, 82, 82);
+            }
+            .ab1{
+                display:inline-block;
+                height:100px;
+                width:45%;
+            
+            }
+            .skills{
+                font-family:'Times New Roman', Times, serif;
+                
+                display:inline-block;
+                width:45%;
+                font-weight:400;
+                
+                
+                
+            }
+            .skills h2,.ab1 h2{
+                font-weight:400;
+                text-shadow:1px 1px grey;
+            }
+            .known{
+                
+                padding:5px;
+                margin-right:15px;
+                margin-top:15px;
+                border:0px solid black;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.523);
+                width:fit-content;
+                display:inline-block;
+                border-radius:5px;
+                background-color: rgba(128, 128, 128, 0.221);
+            }
+            .known:hover{
+                box-shadow: 5px 5px 5px rgba(69, 160, 154, 0.903) ;
+                cursor: pointer;
+                background-color:rgba(72, 184, 171, 0.419) ;
+            }
+          
+            .seperate{
+                display:flex;
+                justify-content:space-between ;
+            }
+            .line{
+                background-color:rgb(255, 162, 0);
+                width:2px;
+            }
+            .segments{
+                border:0px solid white;
+                background-color: rgba(166, 0, 255, 0.729);
+                padding:5px;
+                font-family: 'Ubuntu', sans-serif;
+                box-shadow:0px 2px 2px black;
+                margin-bottom:10px;
+              
+            }
+            .hedding-n{
+                font-weight: bold;
+                text-shadow: 1px 1px 1px black;
+            }
+            .content{
+                font-size: large;
+                font-family: 'ubuntu',sans-serif;
+            }
+            .topic{
+                font-variant: small-caps;
+                font-family:'ubuntu',sans-serif;
+                font-size:xxx-large;
+                text-shadow:1px 1px 1px rgb(255, 162, 0);;
+                color:
+            }
+            
+            @media screen and (max-width: 450px) {
+                .screen{
+                    flex-direction:column;
+                }    
+                
+            }
+           
+          
+            @media screen and (max-width: 525px){
+                .smedia
+                {
+                    display:none;
+                }
+                .seperate{
+                    display:block;
+                }
+                .ab1,.skills{
+                    width:100%;
+
+                }
+                .line{
+                    display:none;
+                }
+                
+             
+            }
+           
+            @media screen and (max-width: 680px){
+                .d-menu{
+                    display:block;
+                }
+                .menu1{
+                    display:none;
+                }
+                
+            }
+           
+         
+        </style>
+
+    </head>
+    <body>
+          
+        
+        <div class="nav">
+            <div class="logo"> 
+                <div class="dp_div" ><img class="dp" src="../images/letter-b.png"></div> 
+                <div class="logo_name" style="color:rgb(255, 162, 0);text-shadow:1px 1px rgba(255, 42, 0, 0.964);" >DINESH BALA</div>
+            </div> 
+            <div class="menu1">
+                <ul class="n1">
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                    <li>PROFILE</li>
+                </ul>
+            </div>
+            <div class="d-menu" onmouseleave="hide()">
+                <img class="m1" id="m1" src="../images/hamburger.png" onclick="change0()" >
+                <img src="close.png" class="c-img">
+                <div class="m2" id="m2">
+                    <div class="m-items">HOME</div>
+                    <div class="m-items">ABOUT</div>
+                    <div class="m-items">CONTACT</div>
+                    <div class="m-items">SIGNIN</div>
+                    <div class="m-items">LOGIN</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <div class="screen">
+        </div>
+        <div class="home" id="home">
+            <div class="topic">TECH UPDATES</div>
+            <div class="segments">
+                <p class="hedding-n">
+                    Event Title: AI Summit 2023<br>
+                    Company: XYZ Tech Solutions
+                </p><br>
+                <p class="content-n">
+                    XYZ Tech Solutions is thrilled to announce the AI Summit 2023, a premier conference dedicated to exploring the latest advancements and applications of artificial intelligence. This event will bring together industry experts, thought leaders, and technology enthusiasts to discuss topics like machine learning, natural language processing, computer vision, and more. Attendees will have the opportunity to gain insights, network with peers, and discover how AI is transforming industries worldwide.
+                </p><br>
+            </div>
+            <div class="segments">
+                <p class="hedding-n">
+                    Event Title: Cloud Innovators Forum<br>
+                    Company: ABC Global<br>
+                </p>
+                
+                <p class="content-n">
+                    Join ABC Global at the Cloud Innovators Forum, an exclusive event focused on cloud computing and its impact on businesses. This forum will feature keynote presentations, panel discussions, and interactive sessions led by renowned cloud experts. Participants will explore topics such as hybrid cloud strategies, serverless computing, data security in the cloud, and emerging trends shaping the future of cloud technology. Don't miss this opportunity to gain valuable insights into leveraging the power of the cloud for your organization's success.
+                </p><br>
+            </div>
+            <div class="segments">
+                <p class="hedding-n">
+                    Event Title: Blockchain Summit 2023<br>
+                    Company: PQR Investments<br>
+                </p>
+                <p class="content-n">
+                    PQR Investments is proud to present the Blockchain Summit 2023, a one-day conference dedicated to exploring the potential of blockchain technology across various industries. This summit will bring together blockchain pioneers, industry leaders, and startups to discuss real-world use cases, decentralized finance, smart contracts, and the future of blockchain. Attendees will have the chance to learn from experts, participate in interactive sessions, and network with professionals driving innovation in the blockchain ecosystem.
+                </p><br>
+            </div>
+            <div class="segments">
+                <p class="hedding-n">
+                    Event Title: Developer Conference: Future of Mobile Apps<br>
+                    Company: DEF Design Studio<br>
+                </p>
+                <p class="content-n">
+                    DEF Design Studio invites developers, designers, and mobile app enthusiasts to the Developer Conference: Future of Mobile Apps. This event will provide a platform to explore the latest trends, tools, and techniques in mobile app development. Participants will gain insights into topics such as progressive web apps, augmented reality, user experience design, and cross-platform development frameworks. Whether you're a seasoned developer or just starting your mobile app journey, this conference will inspire and equip you with the knowledge to build cutting-edge mobile experiences.
+                </p><br>
+            </div>
+            <div class="segments">
+                <p class="hedding-n">
+                    Event Title: Cybersecurity Symposium<br>
+                    Company: LMN Global<br>
+                    
+                </p>
+                <p class="content-n">
+                    LMN Global is excited to announce the Cybersecurity Symposium, a comprehensive event focused on addressing the evolving cybersecurity landscape. This symposium will feature presentations by industry experts, interactive workshops, and discussions on topics like threat intelligence, data privacy, cloud security, and incident response. Attendees will have the opportunity to enhance their understanding of cybersecurity challenges, discover best practices, and network with fellow professionals in the field.
+                </p><br>
+            </div>
+           
+
+          
+          
+        </div>
+        
+        
+        <script>
+            var imga=document.getElementById('m1');
+            var flag=true;
+            
+            function change0()
+            {
+                if(flag)
+                {
+                    imga.src="../images/close.png";
+                    document.getElementById("m2").style.display="block"
+                    flag=false;
+                }
+                else
+                { 
+                    imga.src="../images/hamburger.png";
+                    document.getElementById("m2").style.display="none"
+                    flag=true;
+
+                }
+            }
+            function hide()
+            {
+                document.getElementById("m2").style.display="none"
+                document.getElementById("m1").src="../images/hamburger.png"
+            }
+           
+        </script>
+    </body>
+</html>
